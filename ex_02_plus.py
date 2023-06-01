@@ -1,10 +1,8 @@
 # 2) Desenvolva uma função que receba dois números inteiros e retorne o maior entre eles.
 
+# mesmo que fique mais confuso, é apenas uma possibilidade
 def achar_maior(x: int, y: int) -> int:
-    if x >= y:
-        return x
-
-    return y
+    return x if x >= y else y
 
 
 primNum = int(input("Informe um número: "))
