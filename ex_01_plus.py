@@ -8,5 +8,8 @@ def obt_val_absol(x: int) -> int:
 
 
 numEx = int(input("Informe um número: "))
+
 absoluto = obt_val_absol(numEx)
+
 print(f"O valor absoluto de {numEx} é {absoluto}")
+
