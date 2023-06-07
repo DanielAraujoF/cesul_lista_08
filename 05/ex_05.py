@@ -20,20 +20,19 @@
 # usuário solicitar as entradas para a realização do cálculo. Exibir como saída o resultado obtido
 # no cálculo
 
-def area_quadrado(l: int):
-    return l ** 2
-
-
-def area_circulo(r: int):
-    return 3.14 * (r ** 2)
-
-
-def area_triangulo(b: int, h: int):
-    return (b * h) / 2
-
+from ex_05_funcoes import area_quadrado, area_triangulo, area_circulo
 
 tipoFormaGeo = int(input("Qual a forma geométrica?\n 1 - Quadrado.\n 2 - Círculo\n 3 - Triângulo\n R: "))
 
 if tipoFormaGeo == 1:
     lado = int(input("Como o cálculo de área do quadrado é lado x lado, informe o tamanho de apenas um lado do quadrado: "))
     print(area_quadrado(lado))
+
+elif tipoFormaGeo == 2:
+    raio = int(input("Insira o raio do círculo: "))
+    print(area_circulo(raio))
+
+else:
+    base = int(input("Insira a base do triângulo: "))
+    altura = int(input("Insira a altura do triângulo: "))
+    print(area_triangulo(base, altura))
