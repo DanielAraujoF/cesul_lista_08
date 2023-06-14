@@ -21,6 +21,7 @@
 # no cálculo
 
 from ex_05_funcoes import area_quadrado, area_triangulo, area_circulo
+# ou from ... import * (vai puxar todas as funções)
 
 tipoFormaGeo = int(input("Qual a forma geométrica?\n 1 - Quadrado.\n 2 - Círculo\n 3 - Triângulo\n R: "))
 

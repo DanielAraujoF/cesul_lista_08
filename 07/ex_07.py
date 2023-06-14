@@ -3,8 +3,11 @@ def soma(x: int, y: int, z: int):
 
 
 def escolha_sabor():
-    sabor = int(input("Defina o tipo do sabor da pizza: \n1 - Normal - 15 "
-                      "reais \n2 - Gourmet - 20 reais \n3 - Premium - 30 reais \nR: "))
+    sabor = int(input("Defina o tipo do sabor da pizza: \n"
+                      "1 - Normal - 15 reais \n"
+                      "2 - Gourmet - 20 reais \n"
+                      "3 - Premium - 30 reais \n"
+                      "R: "))
     if sabor == 1:
         return 15
     elif sabor == 2:
