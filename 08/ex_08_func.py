@@ -5,34 +5,39 @@ def calc_fat(x: int):
         return x * calc_fat(x - 1)
 
 
-def opcao() -> int:
-    escolha = int(input("O que deseja calcular? "
-                        "\n1 - Arranjos: "
-                        "\n𝐴 = 𝑛! / (𝑛 − 𝑝)! \n"
-                        "\n2 - Combinações: \n"
-                        "𝐶 = 𝑛! / (𝑝! ∗ (𝑛 − 𝑝)!) "
-                        "\n3 - Sair \n"
-                        "R: "))
-
-    return escolha
+resultado = 1
 
 
-def desenv_op():
-    if opcao() == 1:
-        calc_comb()
-    elif opcao() == 2:
-        calc_arranjo()
+def exibir_menu() -> int:
+    return int(input("O que deseja fazer? \n"
+                     "1 - Calcular arranjo: \n"
+                     "𝐴 = 𝑛! / (𝑛 − 𝑝)! \n\n"
+                     "2 - Calcular combinação: \n"
+                     "𝐶 = 𝑛! / (𝑝! ∗ (𝑛 − 𝑝)!) \n\n"
+                     "3 - Sair do menu. \n\n"
+                     "R: "))
 
 
-def calc_comb() -> int:
-    return calc_fat(n) / calc_fat(n - p)
+def desenvolver_escolha():
+    opcao = exibir_menu()
+    if opcao == 1:
+        n = int(input("Insira o primeiro número: "))
+        p = int(input("Insira o primeiro número: "))
+        calc_comb(n, p)
+    else:
+        n = int(input("Insira o primeiro número: "))
+        p = int(input("Insira o primeiro número: "))
+        calc_arranjo(n, p)
 
 
-def calc_arranjo() -> int:
-    return calc_fat(n) / calc_fat(p) * calc_fat(n - p)
+def calc_comb(x: int, y: int) -> int:
+    return resultado == calc_fat(x) / calc_fat(x - y)
 
 
-n = int(input("Insira o primeiro número: "))
-p = int(input("Insira o primeiro número: "))
+def calc_arranjo(x: int, y: int) -> int:
+    return resultado == calc_fat(x) / calc_fat(y) * calc_fat(x - y)
+
+
+
 
 # print(f"{nome}, o resultado do(a) {op_escolhida} dos números {n} e {p} será {resultado}")

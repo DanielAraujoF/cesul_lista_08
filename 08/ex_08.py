@@ -1,3 +1,10 @@
 from ex_08_func import *
 
-print(def_nome())
+
+exibir_menu()
+
+
+desenvolver_escolha()
+
+
+print(f"O resultado da conta a qual você quis realizar é {resultado}")

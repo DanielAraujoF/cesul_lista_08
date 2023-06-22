@@ -12,8 +12,14 @@ def escolha_sabor():
         return 15
     elif sabor == 2:
         return 20
-    else:
+    elif sabor == 3:
         return 30
+    else:
+        while sabor != 1 or sabor != 2 or sabor != 3:
+            print("Nenhum sabor corresponde ao inserido. Tente novamente:")
+            escolha_sabor()
+            if sabor != 1 or sabor != 2 or sabor != 3:
+                break
 
 
 valor = soma(escolha_sabor(), escolha_sabor(), escolha_sabor())
